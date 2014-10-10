@@ -255,7 +255,7 @@ main.sync.user_and_group() {
 	
 	if [ -f ${PROFILE_HOME}/bin/usersFullSync.sh -a -x ${PROFILE_HOME}/bin/usersFullSync.sh ]; then
 		main.log "Iniciando o sincronismo full de usuarios."
-		${PROFILE_HOME}/bin/usersFullSync.sh -u operador -p restartBPM -host bpmnodeps01.desenv.bb.com.br -port 8880 | tee -a $LOG_FILE
+		${PROFILE_HOME}/bin/usersFullSync.sh -u operador -p restartBPM -host bpmnodeps01.domain.com.br -port 8880 | tee -a $LOG_FILE
 		[ $? -ne 0 ] && exit 1 
 	else 
 		main.log "ERROR: Script [${PROFILE_HOME}/bin/usersFullSync.sh] nao encontrado ou sem permissao."
@@ -264,7 +264,7 @@ main.sync.user_and_group() {
 	
 	if [ -f ${PROFILE_HOME}/bin/syncGroupMembershipForAllGroups.sh -a -x ${PROFILE_HOME}/bin/syncGroupMembershipForAllGroups.sh ]; then
 		main.log "Iniciando o sincronismo full de grupos."
-		${PROFILE_HOME}/bin/syncGroupMembershipForAllGroups.sh -u operador -p restartBPM -host bpmnodeps01.desenv.bb.com.br -port 8880 | tee -a $LOG_FILE
+		${PROFILE_HOME}/bin/syncGroupMembershipForAllGroups.sh -u operador -p restartBPM -host bpmnodeps01.domain.com.br -port 8880 | tee -a $LOG_FILE
 		[ $? -ne 0 ] && exit 1 
 	else 
 		main.log "ERROR: Script [${PROFILE_HOME}/bin/syncGroupMembershipForAllGroups.sh] nao encontrado ou sem permissao."
