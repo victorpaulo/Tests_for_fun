@@ -33,7 +33,7 @@ echo "Executando o comando wsadmin..."
 $WAS_HOME/wsadmin.sh -lang jython -conntype NONE -username $USERNAME -password $PASSWORD -f $TMP_FILE 
 echo "Comando wsadmin finalizado"
 
-sed -i -e 's/WAS_CELL\=Cell01/WAS_CELL\=$CELLNAME/g; s/WAS_NODE\=DmgrNode01/WAS_NODE\=$NODENAME/g' $WAS_HOME/profiles/Dmgr01/bin/setupCmdLine.sh
+sed -i -e 's/WAS_CELL=Cell01/WAS_CELL=$CELLNAME/g; s/WAS_NODE=DmgrNode01/WAS_NODE=$NODENAME/g' $WAS_HOME/profiles/Dmgr01/bin/setupCmdLine.sh
 
 IS_OK=$?
 
